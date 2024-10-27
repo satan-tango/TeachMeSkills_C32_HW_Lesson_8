@@ -1,4 +1,5 @@
-package com.varkovcih.lesson_8.task_3.model;
+package com.varkovcih.lesson_8.task_3;
+
 
 import com.varkovcih.lesson_8.task_3.model.patient.Patient;
 
@@ -23,3 +24,5 @@ public class ApplicationRunner {
         secondPatient.getDoctor().treatAPatient();
     }
 }
+
+
