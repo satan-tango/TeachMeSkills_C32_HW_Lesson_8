@@ -14,14 +14,14 @@ public interface CardTransferService {
     // TODO добавить входные параметры в метод: карта с.., счет на..., сумма трансфера
     Check transferFromCardToAccount(BaseCard card, Account account, double transferAmount);
 
-     default boolean isCardSuitableForTransfer(BaseCard card, double transferAmount) {
+    default boolean isCardSuitableForTransfer(BaseCard card, double transferAmount) {
         if (!card.checkIfThereIsEnoughMoneyToTransfer(transferAmount)) {
             System.out.println("There is no enough money on the card");
             return false;
         }
 
         if (!card.checkCardLimitTransfer(transferAmount)) {
-            System.out.printf("The transfer amount is too high");
+            System.out.println("The transfer amount is too high");
             return false;
         }
 

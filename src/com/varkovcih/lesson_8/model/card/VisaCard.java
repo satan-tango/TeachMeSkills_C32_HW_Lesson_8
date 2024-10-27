@@ -4,7 +4,7 @@ import com.varkovcih.lesson_8.utils.Constants;
 
 import java.util.Date;
 
-public class VisaCard extends BaseCard{
+public class VisaCard extends BaseCard {
 
     int cashback;
 
@@ -16,7 +16,7 @@ public class VisaCard extends BaseCard{
     @Override
     public boolean checkCardLimitTransfer(double transferAmount) {
         // TODO реализовать проверку лимита. суть проверки в том, что сумма для перевода не превышает лимит
-        if (transferAmount > Constants.MASTER_CARD_TRANSFER_LIMIT) {
+        if (transferAmount > Constants.VISA_CARD_TRANSFER_LIMIT) {
             return false;
         } else {
             return true;

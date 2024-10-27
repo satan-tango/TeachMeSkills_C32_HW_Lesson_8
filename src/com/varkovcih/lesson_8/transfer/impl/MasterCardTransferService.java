@@ -19,8 +19,7 @@ public class MasterCardTransferService implements CardTransferService {
         cardFrom.amount -= transferAmount;
         cardTo.amount += transferAmount;
 
-        Check check = new Check(transferAmount, new Date(), cardFrom.cardNumber);
-        return check;
+        return new Check(transferAmount, new Date(), cardFrom.cardNumber);
     }
 
     @Override
@@ -32,8 +31,7 @@ public class MasterCardTransferService implements CardTransferService {
         card.amount -= transferAmount;
         account.amount += transferAmount;
 
-        Check check = new Check(transferAmount, new Date(), card.cardNumber);
-        return check;
+        return new Check(transferAmount, new Date(), card.cardNumber);
     }
 
 
