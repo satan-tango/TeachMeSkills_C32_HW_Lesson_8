@@ -12,6 +12,7 @@ import com.varkovcih.lesson_8.transfer.impl.MasterCardTransferService;
 import com.varkovcih.lesson_8.transfer.impl.VisaCardTransferService;
 import com.varkovcih.lesson_8.user_action.UserAction;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class ApplicationRunner {
@@ -37,9 +38,9 @@ public class ApplicationRunner {
                 new Account[]{new Account("IMKD23324234", 55.3),
                         new Account("IMKD2211214", 23)},
                 new BaseCard[]{
-                        new MasterCard("4344-3242-3434-1111", 322, new Date(2029, 12, 1)
+                        new MasterCard("4344-3242-3434-1111", 322, new Date(2029, Calendar.JANUARY, 1)
                                 , "Dmitry Varkovich", "BLR", 233, "Belarus"),
-                        new VisaCard("1240-1241-6666-1141", 669, new Date(2025, 5, 10)
+                        new VisaCard("1240-1241-6666-1141", 669, new Date(2025, Calendar.JUNE, 10)
                                 , "Dmitry Varkovich", "BLR", 10, 3)},
                 "KH5431266");
         IndividualClient secondClient = new IndividualClient(
@@ -47,9 +48,9 @@ public class ApplicationRunner {
                 new Account[]{new Account("IMKD32224234", 0),
                         new Account("IMKD124141241", 500)},
                 new BaseCard[]{
-                        new MasterCard("5555-1231-0000-1241", 432, new Date(2024, 3, 1)
+                        new MasterCard("5555-1231-0000-1241", 432, new Date(2024, Calendar.APRIL, 1)
                                 , "Pavel Shevich", "BLR", 100, "Belarus"),
-                        new VisaCard("3233-1324-1215-5543", 211, new Date(2030, 1, 3)
+                        new VisaCard("3233-1324-1215-5543", 211, new Date(2030, Calendar.FEBRUARY, 3)
                                 , "Pavel Shevich", "BLR", 21, 2)},
                 "KH5431266");
 
